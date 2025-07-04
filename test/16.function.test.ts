@@ -185,14 +185,14 @@ console.clear()
 // ===================================================================
 // * FUNCTION DENGAN PARAMETER OPSIONAL
 // ===================================================================
-function sapa(nama: string, panggilan?: string): string {
-  if (panggilan) {
-    return `Halo ${panggilan} ${nama}`;
-  }
-  return `Halo ${nama}`;
-}
-console.log(sapa("Rafa")); // ✅ Halo Rafa
-console.log(sapa("Rafa", "Tuan")); // ✅ Halo Tuan Rafa
+// function sapa(nama: string, panggilan?: string): string {
+//   if (panggilan) {
+//     return `Halo ${panggilan} ${nama}`;
+//   }
+//   return `Halo ${nama}`;
+// }
+// console.log(sapa("Rafa")); // ✅ Halo Rafa
+// console.log(sapa("Rafa", "Tuan")); // ✅ Halo Tuan Rafa
 
 // Parameter dengan `?` → boleh diberikan atau tidak
 
@@ -217,9 +217,9 @@ console.log(kali(5, 3)); // ✅ 15
 // ===================================================================
 // * FUNCTION TANPA RETURN (VOID)
 // ===================================================================
-function cetakPesan(pesan: string): void {
-  console.log("Pesan:", pesan);
-}
+// function cetakPesan(pesan: string): void {
+//   console.log("Pesan:", pesan);
+// }
 cetakPesan("Selamat belajar!"); // ✅ Pesan: Selamat belajar!
 
 // Return type `void` → tidak mengembalikan apa pun
@@ -269,9 +269,9 @@ console.log(jumlahSemua(1, 2, 3, 4)); // ✅ 10
 // ===================================================================
 // * CALLBACK FUNCTION DENGAN TIPE
 // ===================================================================
-function prosesData(data: number[], cb: (n: number) => number): number[] {
-  return data.map(cb);
-}
+// function prosesData(data: number[], cb: (n: number) => number): number[] {
+//   return data.map(cb);
+// }
 // const hasil = prosesData([1, 2, 3], (n) => n * 2);
 // console.log(hasil); // ✅ [2, 4, 6]
 

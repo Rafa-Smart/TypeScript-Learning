@@ -1,0 +1,61 @@
+
+
+
+
+// ketika kita menggunkan ? pada sebuahh variable atau parameter
+// maka secara otomatis kita bisa mengirimkan data undefined
+
+
+
+// jadi kalo 
+it("testing", () => {
+    const data: {id?:number} = {id:1234}
+
+    // maka sebenarnya nilai dari data
+    // data.id = (number | undefined)
+
+})
+
+// tapi terkadang pada kasus ktia ingin mengirimkan data null, pada kasus ini kita juga 
+// bisa mengirimkan tipedata null
+
+
+// jadi kita bsia ngirim null
+
+it("test undefined...", () => {
+
+    function sayHello(nama?:string){ // bisa string atau undefined
+        if(nama){
+            console.log(`halo ${nama}`)
+        } else { // jika falsy, undefied / null
+            console.log('halo ga tau')
+        }
+    } 
+
+    let nama: (string | undefined) = 'rafa' // sama kayak ?
+    sayHello(nama)
+    nama = undefined;
+    sayHello(nama)
+
+})
+
+it("test null...", () => {
+
+    function sayHello(nama?:string | null){ // bisa string atau null atau undefined
+        if(nama){
+            console.log(`halo ${nama}`)
+        } else if(typeof nama === 'undefined') { 
+            console.log('halo ga tau')
+        } else {
+            console.log('halo null')
+        }
+    } 
+
+    let nama: (string | undefined | null) = 'rafa' // sama kayak ?
+    sayHello(nama)
+    nama = undefined;
+    sayHello(nama)
+    nama = null
+    sayHello(nama)
+
+})

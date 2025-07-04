@@ -11,13 +11,18 @@ it('read only array', () => {
     // jadi disini kita akn membuat data array
     // yag hanya bsia di baca saja
     // jadi tidak bisa di ubah ubah lagi
-    // dengan cara tipe data ReadonlyArray<tipedata>
+    // dengan cara tipe data readonly
     // meskipun ketika nanti kodenya diubah ke js, ini akan tetap bisa diubah
     // jadi yang menjaganya itu adaalh si tsnya
     // jadi kalo liat di kodejsnya tetap sama aja
     // tapi di js bisa dirubah, tapi ketika di file ts akan dijaga oleh si tsnya
     let dataArray1 = [1, 2, 3];
     console.log(dataArray1); // bisa
+    // harusnya gini 
+    // jadi penjelasa untuk Readonly ada di file 6.tipe-data-tuple
+    // dan itu juga masih belum lengkap
+    let dataArray2 = [1, 2, 3];
+    console.log(dataArray2);
     // dataArray1.push(4) // ga bisa 
 });
 // Array adalah struktur data yang digunakan untuk menyimpan sekumpulan nilai dalam satu variabel.
@@ -74,6 +79,10 @@ let elemen = matriks[1][0]; // 3
 let nilai = [];
 nilai.push(100);
 nilai.push(200);
+// jadi kita gunakan tipe data Produk pada setiap
+// elemen di arraynya
+// sama kayak number[]
+// jadi setiap elemen pada arraynya itu bertipe data number
 let daftarProduk = [
     { id: 1, nama: "Laptop" },
     { id: 2, nama: "Mouse" },

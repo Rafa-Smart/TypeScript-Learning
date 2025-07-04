@@ -6,6 +6,22 @@
 // Tujuannya adalah untuk menyimpan data yang terkait tetapi memiliki tipe berbeda.
 // Contoh tuple sederhana:
 // [string, number] → berarti elemen pertama harus string, dan elemen kedua harus number.
+console.clear();
+it('test readonly', () => {
+    // disini kita buat tuple
+    let array1 = [1, 'rafa', [10, 10, 10], true, 20, 20, 20, 20];
+    // atau bisa juga jika igin readonly
+    expect(12).toBe(12);
+    console.log(array1);
+    let d = [1, 'rafa'];
+    // readonly adalah kata kunci (keyword) di TypeScript yang digunakan 
+    // untuk menandai properti pada objek atau elemen tuple agar tidak bisa 
+    // diubah (immutable) setelah ditetapkan.
+    let array2 = [1, 'rafa', [10, 10, 10], true, 20, 20, 20, 20];
+    console.log(array2);
+    // Readonly<T> adalah utility type bawaan dari TypeScript yang digunakan 
+    // untuk mengubah seluruh properti dari T menjadi readonly.
+});
 let identitas = ["Rafa", 25];
 // Bagaimana Cara Kerja Tuple?
 // Ketika mendeklarasikan tuple, kamu menentukan:

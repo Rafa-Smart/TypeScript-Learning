@@ -1,11 +1,11 @@
 function myReverse(array){
 
     for(let i = 0; i< array.length; i++){
-        array[0+i] = array[(array.length-1) - i]
+        [array[0+i], array[0+i]] = [array[(array.length-1) - i],array[(array.length-1) - i]]
     }
     return array
 }
-
+console.clear()
 let data2 = [1,2,3,4,5,6,7,8,9,10];
 console.log(myReverse(data2))
 
@@ -16,3 +16,15 @@ console.log(array) // [1,2,3,4]
 
 
 // jadi kitaa tuker 10 jadi 1, 1 jadi 10, dst...
+
+function myReverse2(array){
+
+    for(let i = 0; i< array.length; i++){
+        let d = array.pop()
+        array.unshift(d)
+    }
+    return array
+}
+console.log("==========")
+let data3 = [1,2,3,4,5,6,7,8,9,10];
+console.log(myReverse2(data3))

@@ -94,7 +94,7 @@ it("test lagii...", () => {
     readonly nama: string;
   }
   //   jadi readonly ini akna menjaga agar datanya tidak bisa diubah ubah
-  // dari pertama kali datanya diisikan
+  // setelah pertama kali datanya dibuat / diisi
 
   const tesReadonly: TesReadonly = {
     id: 12345,

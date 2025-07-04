@@ -1,0 +1,1 @@
+ini adalah data data pembelajaran typescript saya

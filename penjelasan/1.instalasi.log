@@ -1,0 +1,63 @@
+jadi kita akan menginstall jest untuk unit testing pada typescript
+dengan perintah berikut:
+
+
+1. menambah library jest
+    npm install --save-dev jest ts-jest @types/jest --> typejest ini untuk auto complete
+2. menambah library babel
+    npm install --save-dev babel-jest @babel/preset-env
+3. menambah file konfigurasi jest
+    npm create jest
+    lalu hapus config jest di package.json 
+    lalu aktifkan ini di file jest.config.mjs "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+4. menambah file konfigurasi babel
+    buat file babel.config.json di root project
+    lalu isi dengan
+    {
+      "presets": ["@babel/preset-env"]
+    }
+
+setup projek typescript
+
+1. install dependencies typescript
+   npm install --save-dev typescript 
+   kita menginstall typescript sebagai devDependencies
+   karena ujung ujungnya kita akan mengcompile typescript ke javascript 
+2. setup typescript projects
+   npx tsc --init
+   ini akan membuat file tsconfig.json di root project kita
+   lalu kita ubah beberapa konfigurasi di tsconfig.json
+   - "module": "es6" --> ini untuk mengaktifkan module es6
+   -- yang dibawh ini ga wajib
+   - "target": "esnext" --> ini untuk mengaktifkan fitur terbaru dari javascript
+   - "moduleResolution": "node" --> ini untuk mengaktifkan module resolution nodejs
+   - "outDir": "./dist" --> ini untuk menentukan output dari compile typescript ke javascript
+   - "rootDir": "./src" --> ini untuk menentukan root directory dari source code typescript kita
+    https://jestjs.io/docs/getting-started
+    https://aka.ms/tsconfig
+
+    typescripthttps://jestjs.io/docs/getting-started
+ 3. menambah dependencies typescript
+    npm install --save-dev @babel/preset-typescript
+ 4. lalu di file babel.config.json kita tambahkan preset typescript
+   '@babel/preset-typescript'
+   jadinya gini
+   {    
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-typescript"
+        ]
+    } 
+ 5. lalu install ts-jest
+    npm install --save-dev ts-jest
+ 6. install jest global 
+    npm install --save-dev @jest/globals
+7. install 
+    npm install --save-dev @types/jest --> jadi ga perlu import jest di setiap file test
+    dan auto complete
+
+   cara menjalanan testingnya
+   kita bsia pake npx jest atau npm test
+   atau kita bisa buat script sendiri di package.json

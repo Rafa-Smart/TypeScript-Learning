@@ -76,7 +76,7 @@ it("test lagii...", () => {
   }
 
   const perkalian: HItung2 = (a, b) => a * b;
-  console.log(`perkalian: ${perkalian(5,5)}`)
+  console.log(`perkalian: ${perkalian(5, 5)}`);
 
   // ini ga bisa karena ada 2 interface, tapi hanya dipake 1
 
@@ -86,6 +86,25 @@ it("test lagii...", () => {
   // }
 
   // const perkalian: HItung2 = (a,b) => a * b
+
+  // buat interface readonly (untuk propretynya)
+
+  interface TesReadonly {
+    id: number;
+    readonly nama: string;
+  }
+  //   jadi readonly ini akna menjaga agar datanya tidak bisa diubah ubah
+  // dari pertama kali datanya diisikan
+
+  const tesReadonly: TesReadonly = {
+    id: 12345,
+    nama: "rafa khadafi",
+  };
+  // ini ga bisa, karena sudah readonly
+  //   tesReadonly.nama = 'jamal'
+
+  //   hanya bisa dibaca
+  console.log(tesReadonly);
 });
 
 console.clear();

@@ -1,3 +1,7 @@
+
+// jadi membaut fungsi yang sama, tapi dengan parameter yang berbeda beda
+
+
 // jadi fungis overload itu adalah
 // kita mendeklarasikan function tapi bisa digunakan beberapa kali
 // atau bisa diugnkan dnegna cara implementasi yang berbeda beda
@@ -31,7 +35,7 @@ it("testing...", () => {
   };
 
 
-  
+
 });
 
 // ===================================================================
@@ -55,6 +59,8 @@ it("testing...", () => {
 // ===================================================================
 
 console.clear();
+
+// ini buat template dulu
 // Deklarasi overload: menerima string → string
 function prosesData(data: string): string;
 
@@ -62,6 +68,8 @@ function prosesData(data: string): string;
 function prosesData(data: number): number;
 
 // Implementasi tunggal: menerima tipe union (string | number)
+// nah kalo pas dideklarasikannya itu paramternya beda beda
+// maka pas implementasinya itu ebisa menggunakan union, atau bisa pake any
 function prosesData(data: string | number): string | number {
   if (typeof data === "string") {
     return data.toUpperCase(); // jika string, ubah jadi kapital
@@ -75,6 +83,23 @@ function prosesData(data: string | number): string | number {
 console.log(prosesData("hello")); // ✅ "HELLO"
 console.log(prosesData(21)); // ✅ 42
 // console.log(prosesData(true)); // ❌ ERROR: Argument of type 'boolean' is not assignable
+
+
+
+// jadi ga boleh membuat deklarasi fungsi overload yang hanya berbeda
+// tipedata returnnya
+// contoh
+// ❌ TypeScript ERROR!
+function contoh(x: string): string;
+function contoh(x: string): number; // ⚠️ Error: Duplicate function implementation
+function contoh(x: string): any {
+  return x.length; // atau return x.toUpperCase();
+}
+
+// jadi paramter nya itu sama, tapi hanya beda returnnya saja
+
+
+
 
 // ===================================================================
 // * CONTOH: OVERLOAD DENGAN JUMLAH PARAMETER BERBEDA

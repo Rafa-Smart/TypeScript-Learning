@@ -101,9 +101,6 @@ arr.forEach((el) => {
         console.log("Number:", el * 2);
     }
 });
-function ambilData(id) {
-    console.log("ID:", id);
-}
 function suaraHewan(h) {
     if (h.jenis === "kucing") {
         h.meong(); // ✅ Bisa, karena sudah diskriminasi

@@ -127,9 +127,9 @@ arr.forEach((el) => {
 // * CONTOH UNION DALAM TYPE ALIAS
 type ID = string | number;
 
-function ambilData(id: ID) {
-  console.log("ID:", id);
-}
+// function ambilData(id: ID) {
+//   console.log("ID:", id);
+// }
 
 // ===================================================================
 // * UNION VS ANY VS UNKNOWN

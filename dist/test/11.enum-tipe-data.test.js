@@ -1,4 +1,16 @@
 "use strict";
+// hasilnya di js
+var CustomerType2 = {
+    0: "GOLD",
+    1: "REGULER",
+    2: "PLATINUM",
+    GOLD: 0,
+    REGULER: 1,
+    PLATINUM: 2
+};
+// jdai bisa di panggil 2 arah
+console.log(CustomerType2.GOLD); // 0
+console.log(CustomerType2[0]); // "GOLD"
 // adi tipe data enu ini adlaha tipe dat ayang sudah pasti
 // ddan ini secara default ketika kita memilih salah satu dari pilihan di enum
 // maka secara default akna berubah menjadi angka dari 0 sampai seterusnya

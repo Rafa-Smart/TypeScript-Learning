@@ -15,6 +15,10 @@ test("test 1...", () => {
 
   // untuk stirngDictionary yang agak bebas
   interface StringDictionary {
+
+    // jadi ini tuh dictionary
+    // yang keynya itu adalh string
+
     // jadi maksudnya itu
     // keynya wajib bertipe data string
     // dan valuenya atau hasilnya itu harus string juga
@@ -54,7 +58,7 @@ test("test 1...", () => {
 
     // ini bisa
     tambah: (a, b) => a + b,
-    kurang: (a, b?) => {
+    kurang: function (a, b?){
       if (b) {
         return a - b;
       } else {
@@ -201,10 +205,10 @@ interface Karyawan extends Person {
   posisi: string;
 }
 
-let k1: Karyawan = {
-  nama: "Rafa",
-  posisi: "Programmer",
-};
+// let k1: Karyawan = {
+//   nama: "Rafa",
+//   posisi: "Programmer",
+// };
 
 // ===================================================================
 // * MULTIPLE INHERITANCE

@@ -1,7 +1,14 @@
 function myReverse(array){
 
     for(let i = 0; i< array.length; i++){
-        [array[0+i], array[0+i]] = [array[(array.length-1) - i],array[(array.length-1) - i]]
+        // [array[0+i], array[(array.length-1) - i]] = [array[(array.length-1) - i],array[0+i]]
+
+        let data1 = array[0+1];
+        let data2 = array[(array.length-1) - i];
+
+        array[0+1] = data2
+        array[(array.length-1) - i] = data1
+
     }
     return array
 }

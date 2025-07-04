@@ -14,7 +14,7 @@ test("test 1...", () => {
   };
 
   // untuk stirngDictionary yang agak bebas
-  interface StringDictionary {
+  interface StringDictionary { // akan menghasilkan objek buakan array
 
     // jadi ini tuh dictionary
     // yang keynya itu adalh string
@@ -33,7 +33,7 @@ test("test 1...", () => {
   };
 
   // untuk array
-  interface MyArray {
+  interface MyArray { // akan menghasilkan objek bukan array
     // jadi index itu maksudnya adalah
     // indexnya itu harus number, dan ini sudah defaulyaa
     // dan valuenya bisa boolean | string | number

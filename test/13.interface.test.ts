@@ -13,8 +13,8 @@ test("test 1...", () => {
     nama: "rafa khadafi",
   };
 
-  // untuk objek yang agak bebas
-  interface Objek {
+  // untuk stirngDictionary yang agak bebas
+  interface StringDictionary {
     // jadi maksudnya itu
     // keynya wajib bertipe data string
     // dan valuenya atau hasilnya itu harus string juga
@@ -23,7 +23,7 @@ test("test 1...", () => {
     // [key:string | number]:string
   }
 
-  const obj1: Objek = {
+  const obj1: StringDictionary = {
     id: "12345",
     nama: "jamal istiqomah",
   };

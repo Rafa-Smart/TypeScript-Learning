@@ -46,7 +46,8 @@ describe("Getter and Setter", () => {
     category.name = "Food";
     console.info(category.name);
 
-    category.name = "";
+    category.name = ""; // memanggil setter
+    // disini kalo "", maka tidak akna berubah
     console.info(category.name);
   });
 

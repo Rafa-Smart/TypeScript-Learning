@@ -15,15 +15,19 @@ describe("testing...", () => {
     // agar bsia diubah
     // contoh
 
-
     // dan kalo ktia mau make nilai default dari parent classnya itu ga bsia ya, jadi
     // apapun nilai yang ada di constructor classnya itu wajib ada di super di childnya
     // dan otomatis harus ad juga di constructor childnya
-    // otomatis akan diganti 9karena harus diisi
+    // otomatis akan diganti (karena harus diisi)
+
+    // bisa lihat di test 2
+
+    // kalo di js bisa pake nilai default dari si parent classnya
+    // lihat di folder playgroud 2
 
     class TestParent {
       nama: string = "rafa";
-      
+
       constructor(nama: string) {
         this.nama = nama;
       }
@@ -32,7 +36,7 @@ describe("testing...", () => {
     class TestChild extends TestParent {
       umur: number;
 
-      constructor(umur: number,nama:string) {
+      constructor(umur: number, nama: string) {
         super(nama); // kalo ga pake ini bakal error
         // super() ini juga error, karena wajib menuliskan seluruh property
         // yang ad di constructor parent classnya
@@ -40,7 +44,47 @@ describe("testing...", () => {
       }
     }
 
-    const tes: TestChild = new TestChild(4,'tes');
+    const tes: TestChild = new TestChild(4, "tes");
+    console.log(tes);
+
+    console.log("--------------");
+  });
+
+  it("test pake property default dari parent class", () => {
+    class TestParent {
+      namaDefault: string = "jamal";
+        // nah jadi kalo mau kita akses, itu kita ga bisa pake constructor
+
+        id:number;
+        constructor(id:number){
+            this.id = id;
+        }
+    }
+
+    class TestChild extends TestParent {
+      umur: number;
+      namaDefaultChild: string = "";
+        
+      constructor(umur: number,id:number) {
+        super(id)
+        this.umur = umur;
+        // nahhhhh ini bsaaa
+
+
+        // jadi sebearnya kita itu akses si fieldnya saja
+        // pukan property yang ada di constructor parentnya
+
+        // dan juga sudah ada defalutnya yaitu "" / string kosong
+        // jadi kalo ga diisi maka tetep wajib di masukan ke constructornya
+
+        this.namaDefaultChild = this.namaDefault
+        console.log(`tetap bisa akses si property default di parentnya ${this.namaDefault}`)
+        // tetap bisa akses si property default di parentnya jamal  
+      }
+
+    }
+
+    const tes: TestChild = new TestChild(4,15);
     console.log(tes);
 
     console.log("--------------");

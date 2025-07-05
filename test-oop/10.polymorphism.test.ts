@@ -55,7 +55,7 @@ describe("testing", () => {
       }
     }
 
-    class Dosen extends Orang {
+    class Dosen extends Guru {
       // dan disini kita override fungsi sayHello
       sayHello(nama: string):string {
         // this.nama ini akan diambil dari si nama di Orang

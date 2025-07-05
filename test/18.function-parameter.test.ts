@@ -7,7 +7,7 @@
 
 // jadi kalo sederhana mah ga perlu pake interface
 
-console.clear()
+console.clear();
 
 it("testing...", () => {
   function toUpper(nama: string): string {
@@ -19,8 +19,58 @@ it("testing...", () => {
   }
 
   const data: string = sayHello("rafa", toUpper);
-  console.log(data)
+  console.log(data);
+});
+
+it("anonymous function", () => {
+  function sayHello(nama: string, filter: (nama: string) => string): string {
+    return `hello ${filter(nama)}`;
+  }
+
+  // jadi kita kasih function tanpa nama
+  const data: string = sayHello("rafa", (nama):string => {
+    return nama.toUpperCase();
+  });
+  console.log(data);
+  const data2: string = sayHello("rafa", function(nama):string{
+    return nama.toUpperCase()
+  });
+  console.log(data2);
 });
 
 
+// coba kalo pake interface
 
+it('testing', () => {
+  interface fungsi {
+    (a:string):string
+  }
+
+  function sayHello(nama:string, fn:fungsi){
+    return fn(nama) // jadi nama disini itu dikirim
+    // ke fungsi fn, nah jadi nanti kaloa da yang akses sayhello, maka nanti fungi fn ini
+    // akan punya parameter nama
+  }
+
+
+  console.log(sayHello('rafa', (nama) => {
+    return nama.toUpperCase()
+  }))
+
+
+  // coba lagi
+
+  interface fungsi2{
+    (a:number, b:number):number
+  }
+
+
+  function kali(angka1:number, angka2:number, fn:fungsi2){
+    return fn(angka1, angka2)
+  }
+
+  console.log(kali(5,5, ((a,b) => {
+    return a * b
+  })))
+
+})

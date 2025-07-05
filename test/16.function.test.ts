@@ -81,7 +81,7 @@ it('function lagi...', () => {
 
 
     // disin ktia bua lagi yang values
-    function hitung(...values:number[]){
+    function hitung(...values:number[]):number{
         // disini ga bisa pake arguemnet, karena harus ada parameter yang digunakan
         let hasil:number = 0;
         for(let i of values){

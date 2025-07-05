@@ -172,8 +172,20 @@ console.clear()
 // ===================================================================
 type Kalkulasi = (a: number, b: number) => number;
 
+// interface Kalkulasi2 = (x:number, y:number) => number; // ga bisa 
+// karena interface harus di objek
+
+interface kalkulasi2 {
+  (x:number, y:number):number;
+}
+
+const modulo: kalkulasi2 = (x,y) => x % y;
+
 const tambah: Kalkulasi = (x, y) => x + y;
 const kurang: Kalkulasi = (x, y) => x - y;
+const bagi: Kalkulasi = function(x, y){
+  return x / y
+}
 
 // ===================================================================
 // * TYPE ALIAS UNTUK ARRAY

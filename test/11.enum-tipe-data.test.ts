@@ -186,7 +186,8 @@ enum Warna {
   Biru,
 }
 
-function pilihWarna(warna: Warna) {
+function pilihWarna(warna: Warna) {// jadi 
+  // ini tuh maksudnya adlah objek warna yang bertipe Warna(enum)
   if (warna === Warna.Merah) {
     console.log("Kamu memilih MERAH");
   }

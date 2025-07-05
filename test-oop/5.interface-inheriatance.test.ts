@@ -3,13 +3,81 @@ describe("testing...", () => {
 
 
 
+    // jadi implements interface
+    // jadi sebuah class itu harus megikuti contrak dari si interfacenya
+    // dan 1 class bisa mengikuti banyak interface sekaligus
 
-
-
+    // jadi ini bukanlah pewarisan tapi mengikuti kontrak dari interface tersebut
 
 
     it('testing...', () => {
+        interface HasName {
+            // berati class yang mengikuti kontrak ini
+            // wajib mempunyai field name
+            _name:string
+        }
+
+        interface sayHello extends HasName {
+            // wajib mempunyai method sayHello
+            sayHello:() => void
+        }
+
+        interface kehidupan {
+
+            // berati class yang mengikuti kontrak ini
+            // wajib memunyai field energi dan method makan
+
+            _energi:number;
+            makan:(jumlah:number) => string
+        }
+
+
+        class User implements sayHello, kehidupan{
+            _name:string;
+            _energi:number = 10;
+            constructor(name:string, energi?:number){
+                this._name = name;
+
+                // jadi kalo nanti ada objek isntance
+                // dia kalo mau ngisi energi
+                // maka kalo disini maka energi dari user ini akna ditambahkan
+                // ke field _energi 
+
+                // tapi kalo ga ngisi maka _energi, tidak hanya punya default nilai yaitu 10
+
+                if(typeof energi == 'number'){
+                    this._energi += energi
+                } 
+            }
+
+            sayHello(){
+                console.log(`haloo ${this._name}`)
+            }
+
+            makan(jumlah:number):string{
+
+                // jadi kalo pake ?
+                // maka semua kemungkinanya harus di pake
+
+                if(typeof this._energi === 'number'){
+                    return `energi ${this._name} sekarang ${this._energi += jumlah}`
+                }else {
+                    return 'kamu tidak makan'
+                }
+            }
+        }
+
+        const jamal:User = new User('jamal')
+
+        console.log(jamal.makan(20)) // energi kamu sekarang 30
+
+        const siti:User = new User('siti', 10)
+
+        console.log(siti.makan(20)) // energi kamu sekarang 40
+
+        console.log('----------------')
         
+
     })
 
 

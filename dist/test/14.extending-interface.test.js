@@ -16,14 +16,14 @@ describe("interface...", () => {
         console.log(user1);
     });
 });
-test('test 2...', () => {
+test("test 2...", () => {
     // selain pake interface, kita juga bisa extends tpai pake type
     // degan cara interception types
     // dan ini juga bsia lebih dari 1
     const siswa1 = {
-        nama: 'jamal',
+        nama: "jamal",
         umur: 16,
-        kelas: 12
+        kelas: 12,
     };
     console.log(siswa1);
 });

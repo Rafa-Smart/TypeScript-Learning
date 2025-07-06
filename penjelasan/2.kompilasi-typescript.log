@@ -63,3 +63,15 @@ karena kode tsnya sudah dihapus oleh babel
 
 oleh karena itu, kita perlu kita harus melakuakn pengecekan secara reguler menggunakan perintah
 npx tsc, untuk memastikan bahwa kode typescript kita tidak ada yang error
+
+
+
+penting, jadi agar kit bisa langusng running ts tanpa
+compilie dulu ke js itu pake
+module npm install -g ts-node typescript
+jadi nanti kalo mau jalanin tinggal
+
+npx ts-node namaFilenya
+
+tetep ga bisa hehe
+jadi harus di compile dulu

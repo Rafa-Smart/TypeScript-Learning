@@ -5,16 +5,60 @@
 // yakin bahwa data ini adalah tipe data yang kamu berikan
 console.clear();
 // contoh
-test('testing...', () => {
-    let nama = 'rafa khadafi';
+test("testing...", () => {
+    let nama = "rafa khadafi";
     // disini belum jelas bahwa nama itu tipedatanya apa
     // makanya ga bsia pake fungstion length
-    let data = nama.length;
-    console.log(data);
+    // let data = nama.length // ini ga bisa
+    // console.log(data)
     // padahal kita sudah tahu betul, bahwa tipe data dari nama
     // ini sduah jelas jelas adalah string
-    // tapi disini kita bisa memaksa kepada tsnya, bahwa data namaini bkan string
-    // tapi number misalnya
+    // jadi harus pake typeof
+    if (typeof nama === "string") {
+        console.log(nama);
+    }
+    // tapi disini kita bisa memaksa kepada tsnya, bahwa data nama ini
+    // tipe datanya adalah string, bukan uknown (krena kita suadh tahu betul)
+    console.log(nama.length);
+    // atau
+    let panjang = nama.length;
+    console.log(panjang);
+    const user = {
+        id: 12345,
+        nama: "jamal istiqomah",
+    };
+    //   nah karena objek user ini tipenya adalah any
+    // tapi padahal kita sudah tau bahwa user ini itu sebenarnya tipedatanya itu sama seprti interface USer
+    // makakita bsia assertion menjadi tipedatanya USer
+    const userHasil = user;
+    console.log(userHasil);
+    // nah jadi user ini tipedatanya kita set secara paksa bahwa dia bertipe data User
+});
+test("kalo salah...", () => {
+    // tapi masalahnya kalo kia pake assertion
+    // maka nanti tsnya ga akan lagi ngecek si tipedatanya
+    // jadi mau itu benar atau salah maka, itu adalah salah kamu
+    // nah disini coba kita set, bahwa user2 ini
+    // yang asalnyya any, tapi mau kita paksa bahwa daia tipedatanya
+    // menjadi User, meskipun tidak sama, lihat atribut kelas
+    // nah tapi kalo pake assertions, maka hal ini tidak menyebabkan error
+    const user2 = {
+        id: 12345,
+        nama: "siti",
+        kelas: "10pplg",
+        tambah: (a, b) => a + b
+    };
+    // jadi ini tidak akan error, karena ga akna di cek tipe datanya sama si 
+    // tsnys, jadi harus hati hati
+    const user3 = {
+        id: 1234
+    };
+    const hasil = user3;
+    console.log(hasil.tambah(5, 5));
+    // nah ini ga error waktu kita akses tambah dari si hasil
+    // akarena tambah ini emmang ada di interface USer
+    // tapi ini hanya akan error jika kita jalankan aplikasinya
+    // jadi ga ketahuan
 });
 console.log("============");
 // Type Assertion adalah cara untuk memberitahu TypeScript bahwa:

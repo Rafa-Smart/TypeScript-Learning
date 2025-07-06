@@ -24,3 +24,8 @@ class TestParent {
 
 // jadi bisa tapi ga boleh pake constructor di parent nya
 // jadi nanti di class childnya itu bisa ga pake constuctor
+
+
+function mymap(array, callback){
+  
+}

@@ -10,6 +10,18 @@ console.clear();
 it('test readonly', () => {
     // disini kita buat tuple
     let array1 = [1, 'rafa', [10, 10, 10], true, 20, 20, 20, 20];
+    // ini ga bisa, karena interface itu untuk objek, jadi
+    // let array4:MyTUple2 = [1,'rafa',[10,10,10],true, 20,20,20,20];
+    // console.log(array4)
+    // jadi kalo interface itu hanya bisa untuk objek, jadi kalo untuk
+    // array itu ga bsia
+    const array4 = {
+        data: [1, 'rafa', [10, 10, 10], true, 20, 20, 20, 20]
+    };
+    console.log(`array coba: ${array4}`); // array coba: [object Object]
+    console.log(`array coba 2: ${JSON.stringify(array4)}`);
+    // atau bisa juga
+    console.log(`array coba 3: ${array4.data}`);
     // atau bisa juga jika igin readonly
     expect(12).toBe(12);
     console.log(array1);

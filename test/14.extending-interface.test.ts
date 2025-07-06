@@ -2,6 +2,8 @@
 // data data / atribut dnegna tipedatanya dari interface lain
 
 describe("interface...", () => {
+
+
   test("test 1...", () => {
     enum TypePosisi {
       CEO = "CEO",
@@ -27,37 +29,32 @@ describe("interface...", () => {
   });
 });
 
+test("test 2...", () => {
+  // selain pake interface, kita juga bisa extends tpai pake type
+  // degan cara interception types
+  // dan ini juga bsia lebih dari 1
 
-test('test 2...', () => {
-    // selain pake interface, kita juga bisa extends tpai pake type
-    // degan cara interception types
-    // dan ini juga bsia lebih dari 1
-    
+  interface Person {
+    nama: string;
+    umur: number;
+  }
 
-    interface Person  {
-        nama:string,
-        umur:number
-    }
+  type Siswa = Person & {
+    // jadi pake & untuk menggabungkan
+    kelas: number;
+  };
 
-    type Siswa = Person & { // jadi pake & untuk menggabungkan
-        kelas: number
-    }
+  const siswa1: Siswa = {
+    nama: "jamal",
+    umur: 16,
+    kelas: 12,
+  };
+  console.log(siswa1);
 
-    const siswa1: Siswa = {
-        nama:'jamal',
-        umur:16,
-        kelas:12
-    }
-    console.log(siswa1)
-
-    type mapel = {
-        mapel:string
-    } & Siswa
-
-
-
-})
-
+  type mapel = {
+    mapel: string;
+  } & Siswa;
+});
 
 console.clear();
 

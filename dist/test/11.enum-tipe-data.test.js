@@ -148,6 +148,7 @@ var Warna;
     Warna[Warna["Biru"] = 2] = "Biru";
 })(Warna || (Warna = {}));
 function pilihWarna(warna) {
+    // ini tuh maksudnya adlah objek warna yang bertipe Warna(enum)
     if (warna === Warna.Merah) {
         console.log("Kamu memilih MERAH");
     }

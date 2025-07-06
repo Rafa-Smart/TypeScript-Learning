@@ -16,6 +16,7 @@ let data2 = 'jamal';
 console.log(data2);
 // tapi kalo langusng di console.log(), maka tidak akan error
 // karena hanya mencetak, bukan mengakses
+// data2.length inierror, karena uknown harus di cekdulu
 // data2.length ini error karena harus di cek dulu
 // jadi uknown itu hanya bisa diakses jika di cek
 console.log(data2);

@@ -12,9 +12,41 @@ console.clear()
 
 
 it('test readonly', () => {
+
+    type MyTUple = [number, string, number[], boolean, ...number[]]
+
+    interface MyTUple2 {
+      // [index:number]:[number, string, number[], boolean, ...number[]]
+      // itu ga bisa karena
+      // Karena TypeScript mengasumsikan setiap elemen dari array yang menggunakan 
+      // index signature adalah tipe tunggal, bukan tuple.
+
+      // jadi caranya adalah 
+      data:[number, string, number[], boolean, ...number[]]
+
+    }
+
     // disini kita buat tuple
-    let array1:[number, string, number[], boolean, ...number[]] = [1,'rafa',[10,10,10],true, 20,20,20,20];
+    let array1:MyTUple = [1,'rafa',[10,10,10],true, 20,20,20,20];
+
+    // ini ga bisa, karena interface itu untuk objek, jadi
+    // let array4:MyTUple2 = [1,'rafa',[10,10,10],true, 20,20,20,20];
+    // console.log(array4)
+    
+    // jadi kalo interface itu hanya bisa untuk objek, jadi kalo untuk
+    // array itu ga bsia
+
+    const array4:MyTUple2 = {
+      data:[1,'rafa',[10,10,10],true, 20,20,20,20]
+    }
+    console.log(`array coba: ${array4}`) // array coba: [object Object]
+
+    console.log(`array coba 2: ${JSON.stringify(array4)}`)
+    // atau bisa juga
+    console.log(`array coba 3: ${array4.data}`)
+
     // atau bisa juga jika igin readonly
+
 
     expect(12).toBe(12)
     console.log(array1)

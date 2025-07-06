@@ -63,8 +63,12 @@ test('test 3...', () => {
     // mendeklarasikan tipedatanya langusng
 });
 console.clear();
+const modulo = (x, y) => x % y;
 const tambah = (x, y) => x + y;
 const kurang = (x, y) => x - y;
+const bagi = function (x, y) {
+    return x / y;
+};
 let list = [1, 2, 3, 4];
 let idList = [1, "dua", 3, "empat"];
 let product = {

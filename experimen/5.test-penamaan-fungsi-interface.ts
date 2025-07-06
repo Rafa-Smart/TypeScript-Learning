@@ -74,3 +74,20 @@
     },
   };
 }
+
+{
+  // kalo ini tanpa nama
+  interface Hitung {
+    (a: number, b: number): number;
+  }
+
+  interface HitungTambah extends Hitung {}
+
+  // const tambah: HitungTambah = (x, y) => x + y;
+
+  //   dan kalo tanpa namanya ada 2 di satu interface, atau dia extends
+  // maka itu annti implementasinya di fungsinya ita kasih seluruh paramternya dan kasih any
+  //   karena kita memaksa untuk implementasi 2 fngsi ini dalam satu fungsi
+  // lihat di file 3 overload
+  //   tapi ini bukan overload, karena kita pake any, jadi tidak ada batasan
+}

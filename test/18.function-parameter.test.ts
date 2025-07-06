@@ -25,11 +25,15 @@ it("testing...", () => {
 it("anonymous function", () => {
   function sayHello(nama: string, filter: (nama: string) => string): string {
     return `hello ${filter(nama)}`;
+    // nah filter(nama) => ini akna menjadi uppercase baru nanti
+    // digabungkan dengan string `hello ${filter(nama)}`
   }
 
   // jadi kita kasih function tanpa nama
   const data: string = sayHello("rafa", (nama):string => {
-    return nama.toUpperCase();
+    return nama.toUpperCase(); 
+    // jadi nanti ini akan dijadikan return value dari
+    // si filter lalu dipakai di return value dari si fungsi sayHello 
   });
   console.log(data);
   const data2: string = sayHello("rafa", function(nama):string{

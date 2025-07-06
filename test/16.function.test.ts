@@ -113,6 +113,9 @@ it('function lagi...', () => {
     // Padahal, interface di TypeScript bukan tipe data langsung seperti number[], melainkan hanya kontrak struktur.
     // Dan walaupun myArray kamu bentuknya mirip array, TypeScript tidak secara otomatis menganggapnya array sesungguhnya.
 
+    // jadi di kontrak myarray ini ga punya fungsi length
+    // jadi bsia kalo dia extends dari Array<number>
+
     // let arrayTest:myArray = [1,2,3,4,5,6,7,8,9,10]
     let arrayTest:number[] = [1,2,3,4,5,6,7,8,9,10]
 

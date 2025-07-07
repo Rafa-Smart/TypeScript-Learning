@@ -79,6 +79,9 @@
   }
 
   const data: MyArray2 = [1, 5, 6, 7, 7, 4, 1, 3, 5, 6, 7, 9];
+  // nah ini secara struktur interface, si [1, 5, 6, 7, 7, 4, 1, 3, 5, 6, 7, 9] sudah cocok
+  // dengan MyArray2, kaerna array [1,2,3,4...] itu sudah punya interface sendisi dan sudah punya clasnya lagi
+  // yang interfacenya itu sudah punya length dan [index: number]: number;
 
   function mymap2(
     array: MyArray2, // kita set bahwa yg dikirim itu harus si data:myarray
@@ -135,7 +138,7 @@ const x: BisaMakan = manusia;
 // dikit ini punya beberapa property atau method yang sama dengan interface yang banyak
 // maka kalo dites
 
-// const ts:interfaceDikit = ObjekDariInterfaceBanyak (sudah imlpementasi)
+// const tes:interfaceDikit = ObjekDariInterfaceBanyak (sudah imlpementasi)
 // ah ini bsia, karena ts secara struktural cocok
 
 // nah ini yang terjadi pada myArray2 dengan [1,2,3,4,5,6,7,8,9,0]

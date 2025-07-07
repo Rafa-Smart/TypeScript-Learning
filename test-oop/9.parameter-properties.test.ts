@@ -33,6 +33,8 @@ describe("test", () => {
     // }
 
     // const jamal = new Person1('jamal', 15)
+    // karena parameter nama dan umur ini tidak di tarud di objeks instancenya 
+    // dengan cara this.nama = nama, this itu merujuk objek instance
     // console.log(jamal) // Person1 {}
 
 

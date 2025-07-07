@@ -205,6 +205,7 @@ describe("testing", () => {
   }
 
   function printArea(shape: Shape) {
+    // nah  jadi disini shape inibukan dari clas lagi tapi sekarna gdari interfacenya
     console.log(`Area: ${shape.getArea()}`);
   }
 

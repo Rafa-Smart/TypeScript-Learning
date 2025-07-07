@@ -54,6 +54,9 @@ describe("testing...", () => {
     class TestParent {
       namaDefault: string = "jamal";
         // nah jadi kalo mau kita akses, itu kita ga bisa pake constructor
+        // nah karena kalo nulis property di field itu artinya sudah otomatis turun juga ke objek instencenya
+        // berati sebenarnya itu adaalh seperti ini
+        // this.namaDefault -> jdi langusng turun ke objek instnece
 
         id:number;
         constructor(id:number){

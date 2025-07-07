@@ -70,7 +70,7 @@ describe("testing", () => {
 
   // Fungsi polymorphik:
 
-  function prosesPembayaran(pembayaran: any) {
+  function prosesPembayaran(pembayaran: Pembayaran) {
     pembayaran.bayar();
   }
 

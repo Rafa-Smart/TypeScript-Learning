@@ -25,6 +25,8 @@ describe("test", () => {
         //   // jadi harus buat dulu fielndya, kalo engga bakalan error
         // }
         // const jamal = new Person1('jamal', 15)
+        // karena parameter nama dan umur ini tidak di tarud di objeks instancenya 
+        // dengan cara this.nama = nama, this itu merujuk objek instance
         // console.log(jamal) // Person1 {}
         class Person1 {
             constructor(nama, umur) {

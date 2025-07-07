@@ -1,18 +1,18 @@
 "use strict";
-test('test', () => {
-    console.log('test');
+test("test", () => {
+    console.log("test");
 });
 console.clear();
 // jadi kalo pake tipe dat any, maka nanti ts tidak akna
 // mengecek tipe datanya, jadi bebas
 // jadi boleh pake any kalo ngambil data objek atau array dari luar
 // yang kita ga tau isinya apa
-let data1 = 'rafa';
+let data1 = "rafa";
 // nah dengan any ktia ga bsia cek dulu tipe datanya
 data1.length; // hasilnya 4, karena ga perlu di cek
 data1 = 123; /// ini bisa
 // tapi kalopake uknown bisa di cek dulu jadi ga bisa langusng pake
-let data2 = 'jamal';
+let data2 = "jamal";
 console.log(data2);
 // tapi kalo langusng di console.log(), maka tidak akan error
 // karena hanya mencetak, bukan mengakses
@@ -20,9 +20,19 @@ console.log(data2);
 // data2.length ini error karena harus di cek dulu
 // jadi uknown itu hanya bisa diakses jika di cek
 console.log(data2);
-if (typeof data2 === 'string') {
-    console.log('ini string', +data2.length); // tereksekusi
+if (typeof data2 === "string") {
+    console.log("ini string", +data2.length); // tereksekusi
 }
+it("test", () => {
+    const data = {
+        test: "halooo",
+    };
+    console.log(data.test?.toLowerCase());
+    const test2 = "rafa khadafi";
+    console.log(test2?.toLowerCase());
+    // const user = getUser(); // bisa null
+    // console.log(user?.name); // aman walau user null
+});
 console.log("------------");
 // Tipe data `any` adalah tipe spesial di TypeScript yang berarti "bebas tipe".
 // Dengan menggunakan `any`, variabel tersebut bisa menyimpan nilai apa pun:
@@ -38,7 +48,7 @@ console.log("------------");
 // Contoh:
 let bebas; // Tanpa tipe, otomatis dianggap `any` jika "noImplicitAny" dimatikan
 bebas = 10; // OK
-bebas = 'teks'; // OK
+bebas = "teks"; // OK
 bebas = { a: 1 }; // OK
 bebas = () => { }; // OK
 // bebas.bernyanyi();     // Tidak error saat diketik, meskipun method ini tidak ada

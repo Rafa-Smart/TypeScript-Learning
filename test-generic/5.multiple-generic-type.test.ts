@@ -1,10 +1,82 @@
 it("testing", () => {
-  // ==========================================================
-  // Penjelasan sangat lengkap tentang MULTIPLE GENERIC FUNCTION
-  // ==========================================================
 
-  // Apa itu "Multiple Generic Function"?
-  // ------------------------------------
+
+    class Entry<T, U>{
+        constructor(public nama:T, public umur:U){}
+    }
+
+    const data:Entry<string,number> = new Entry<string, number>('rafa', 15);
+    console.log(data.nama);
+    console.log(data.umur);
+
+
+
+    class Triple<T,U,H>{
+        public nama:T
+        public umur:U
+        public hobi:H
+        constructor(nama:T, umur:U, hobi:H){
+            this.nama = nama
+            this.umur = umur
+            this.hobi = hobi
+        }
+    }
+
+    // gini juga bisa, karena sudah ada di constructor
+    // jadi tipenya lagsung otomatis dibaca dari constructornya
+    const hasil = new Triple('rafa', 15, true)
+    console.log(hasil)
+
+
+    // tapi kalo misalkan tidak ad di dalam constructor maka 
+    // ts tidak bisa otomatis cek bahwa dia tipenya itu apa
+    // dan akan otomatis mnejadi any
+
+    class SimpleGeneric<T = string> {
+        private value?: T;
+
+        setValue(value: T) {
+            this.value = value;
+        }
+
+        getValue(): T | undefined {
+            return this.value;
+        }
+    }
+
+    it('should create simple generic', async () => {
+        const simple = new SimpleGeneric();
+        simple.setValue("Jamal");
+
+        // ini akan erorr kalo misalkan kita tntukan
+        // tipe genericnya
+        // misal tiep genericnya menjadi string
+        // simple.setValue(100);
+        // simple.setValue(true);
+
+        expect(simple.getValue()!.toUpperCase()).toBe("Jamal"); // bisa
+        expect(simple.getValue()?.toUpperCase()).toBe("Jamal"); // bisa
+        // tanda ! artinya Saya yakin hasilnya adalah string, bukan undefined. 
+        // Jadi lanjutkan saja tanpa komplain.
+
+
+        // dan bedanya dengan ? adlah
+        // jika const data:(undefined|string) = 'rafa'
+        // ! = artinya kita menetapkan bahwa nilai tersebut
+        // itu pasti string, jadi kayak assertion
+
+        // tapi kalo ? itu 
+        // jika dia tidak undefined atu null maka berati string, dan jalankan methodnya
+        // jika dia beneran stirng maka tetap jalankan methodnya
+
+
+    });
+
+
+
+    console.log('===================')
+
+
   // Multiple Generic Function adalah fungsi generic yang memiliki
   // lebih dari satu parameter tipe (type parameter).
   // Dengan kata lain, kita dapat menggunakan dua atau lebih jenis

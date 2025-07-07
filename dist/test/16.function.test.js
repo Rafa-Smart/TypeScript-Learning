@@ -74,6 +74,8 @@ it('function lagi...', () => {
     // Error-nya terjadi di sini, karena kamu mencoba menginisialisasi array ([...]) ke sebuah variabel yang tipenya adalah interface myArray.
     // Padahal, interface di TypeScript bukan tipe data langsung seperti number[], melainkan hanya kontrak struktur.
     // Dan walaupun myArray kamu bentuknya mirip array, TypeScript tidak secara otomatis menganggapnya array sesungguhnya.
+    // jadi di kontrak myarray ini ga punya fungsi length
+    // jadi bsia kalo dia extends dari Array<number>
     // let arrayTest:myArray = [1,2,3,4,5,6,7,8,9,10]
     let arrayTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let hasilMap = hitungMap(arrayTest, ((el, i, arr) => {

@@ -138,6 +138,7 @@ describe("testing", () => {
         }
     }
     function printArea(shape) {
+        // nah  jadi disini shape inibukan dari clas lagi tapi sekarna gdari interfacenya
         console.log(`Area: ${shape.getArea()}`);
     }
     const shapes = [new Circle(5), new Rectangle(4, 6)];

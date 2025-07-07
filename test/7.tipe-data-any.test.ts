@@ -1,22 +1,21 @@
+test("test", () => {
+  console.log("test");
+});
 
-test('test',()=>{
-    console.log('test');
-})
-
-console.clear()
+console.clear();
 // jadi kalo pake tipe dat any, maka nanti ts tidak akna
 // mengecek tipe datanya, jadi bebas
 // jadi boleh pake any kalo ngambil data objek atau array dari luar
 // yang kita ga tau isinya apa
 
-let data1:any = 'rafa';
+let data1: any = "rafa";
 // nah dengan any ktia ga bsia cek dulu tipe datanya
-data1.length // hasilnya 4, karena ga perlu di cek
+data1.length; // hasilnya 4, karena ga perlu di cek
 data1 = 123; /// ini bisa
 // tapi kalopake uknown bisa di cek dulu jadi ga bisa langusng pake
 
-let data2:unknown = 'jamal';
-console.log(data2)
+let data2: unknown = "jamal";
+console.log(data2);
 // tapi kalo langusng di console.log(), maka tidak akan error
 // karena hanya mencetak, bukan mengakses
 // data2.length inierror, karena uknown harus di cekdulu
@@ -24,16 +23,32 @@ console.log(data2)
 // data2.length ini error karena harus di cek dulu
 // jadi uknown itu hanya bisa diakses jika di cek
 
-console.log(data2)
+console.log(data2);
 
-if(typeof data2 === 'string'){
-    console.log('ini string', + data2.length) // tereksekusi
+if (typeof data2 === "string") {
+  console.log("ini string", +data2.length); // tereksekusi
 }
 
+it("test", () => {
+  interface d {
+    test?: string;
+  }
 
-console.log("------------")
+  const data: d = {
+    test: "halooo",
+  };
 
+  console.log(data.test?.toLowerCase());
 
+  const test2 = "rafa khadafi";
+
+  console.log(test2?.toLowerCase());
+
+  // const user = getUser(); // bisa null
+  // console.log(user?.name); // aman walau user null
+});
+
+console.log("------------");
 
 // Tipe data `any` adalah tipe spesial di TypeScript yang berarti "bebas tipe".
 // Dengan menggunakan `any`, variabel tersebut bisa menyimpan nilai apa pun:
@@ -50,11 +65,11 @@ console.log("------------")
 // error meskipun Anda melakukan sesuatu yang sangat aneh.
 
 // Contoh:
-let bebas;             // Tanpa tipe, otomatis dianggap `any` jika "noImplicitAny" dimatikan
-bebas = 10;            // OK
-bebas = 'teks';        // OK
-bebas = { a: 1 };      // OK
-bebas = () => {};      // OK
+let bebas; // Tanpa tipe, otomatis dianggap `any` jika "noImplicitAny" dimatikan
+bebas = 10; // OK
+bebas = "teks"; // OK
+bebas = { a: 1 }; // OK
+bebas = () => {}; // OK
 // bebas.bernyanyi();     // Tidak error saat diketik, meskipun method ini tidak ada
 
 // Catatan:
@@ -120,7 +135,7 @@ if (typeof u === "string") {
 
 // Contoh buruk:
 function proses(data: any) {
-//   return data.toUpperCase(); // ❌ Jika `data` adalah number, akan crash
+  //   return data.toUpperCase(); // ❌ Jika `data` adalah number, akan crash
 }
 
 proses(123); // error di runtime: data.toUpperCase is not a function
@@ -173,8 +188,3 @@ if (typeof hasil === "object" && hasil !== null && "nama" in hasil) {
 
 // Jika tidak, prioritaskan keamanan tipe dengan menggunakan fitur TypeScript
 // yang kaya dan fleksibel.
-
-
-
-
-

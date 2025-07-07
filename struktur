@@ -1,0 +1,89 @@
+https://chatgpt.com/c/686b4e5a-cbb4-8009-afb5-e7c4b11e490f
+; jadi 
+; nah kalo kita set bahwa umurSiswa = [12,24,15]
+; itu berati ktia sama aja kayak buat objek baru instance dari class Array<number>
+; yang sudah merupakan extends atau implements dari interface Array<number>
+; jadi ketika awlnya itu class nya mengikuti interface dari si Array<number>
+; maka kita bisa langsung menggunakan method-method yang sudah ada di interface Array<number
+; pada objek instance nya
+
+interface hanya bisa extends interface
+
+class hanya bisa extends class
+
+interface TIDAK bisa extend class secara langsung
+
+
+padahal sebenarnya kalo kita membuat projek, idealnya kita harus buat dulu interfacenya baru clasnya ?tapi pada kasus class dan interface di ts ini kebalikannya
+
+
+lalu bagaimana ketika sya membuat interface misal myArray extends Array<number> {
+[index:number]:number
+}
+
+nh ketika saya extends Array<number> ini tuh sebenarya interface saya extends dari class Array<numbre> atau dari interface Array<number> ?
+
+dan jika ini interface maka saya hanya menurunkn deklarasi kontrak saja tidak ada implementasinya
+dari si interface Array<number> ini lalu apa fungsinya ? saya extends ?
+
+dan jika itu adalh turunan dari class apakah jika saya buat variable [1,2,3,4,5], yang bertipe myArray, saya bisa mengakses seluruh fungsi di Array ? karena sudah turunan dari classnya
+
+┌────────────────────────┐
+│      Object            │ ◄── Interface paling dasar
+│ (top-level interface)  │
+└──────────┬─────────────┘
+           │
+           ▼
+┌────────────────────────┐
+│     Iterable<T>        │ ◄── Interface untuk membuat struktur bisa di-*iterate*
+│ [Symbol.iterator]():   │
+│    Iterator<T>         │
+└──────────┬─────────────┘
+           │
+           ▼
+┌────────────────────────┐
+│     ArrayLike<T>       │ ◄── Punya properti seperti array
+│ length: number         │     tapi belum tentu iterable
+│ [n: number]: T         │
+└──────────┬─────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│        Array<T>             │ ◄── Interface array penuh
+│ extends Iterable<T>,        │
+│         ArrayLike<T>        │
+│ + semua method: map, pop,   │
+│   forEach, filter, dsb.     │
+└──────────┬────────────┬─────┘
+           │            │
+           ▼            ▼
+  Array<number>   Array<string>   ◄── Penggunaan spesifik
+           │            │
+           ▼            ▼
+      number[]      string[]      ◄── Shorthand syntax
+
+kalo kamu punya ini
+interface StringArray {
+  [index: number]: string;
+  length: number;
+  toString(): string;
+}
+
+let arr: StringArray = ["satu", "dua", "tiga"];
+Kamu bisa langsung:
+
+
+console.log(arr.length); // ✅ 3
+console.log(arr.toString()); // ✅ "satu,dua,tiga"
+console.log(arr[1]); // ✅ "dua"
+Karena array bawaan JavaScript sudah punya semua properti yang diminta interface-mu, maka langsung bisa dipakai.
+
+["satu", "dua", "tiga"] -> karena bagaimanapun juga ini adalah bentuk dari arrayjadi 
+ketika ada hal yng sudah tipenya itu Arraytapi kita
+buat tipe nya itu adalah array like, maka itu bisa
+
+✅ Valid! Karena TypeScript hanya peduli apakah struktur objek tersebut cocok dengan interface-nya, bukan dari mana dia berasal.
+
+➡️ Ini disebut structural typing (juga dikenal sebagai "duck typing"):
+
+"Kalau bentuk dan perilakunya cocok, maka dianggap cocok, tanpa harus explicit inheritance atau instance."

@@ -1,6 +1,13 @@
 // interface adalah cara lain untuk melakukan deklarasi data selain menggunakan type
 // tapi ini lebih baik, karena banyak fitu fitur tambahan dan mudah untuk dikembagkan
 
+it("test", () => {
+  //   Ya, number[] hanyalah shorthand (penulisan singkat) dari Array<number>. Mereka identik.
+  // let a: number[] = [1, 2, 3];         // Sama dengan
+  // let b: Array<number> = [1, 2, 3];    // Sama persis
+  // Keduanya mewarisi seluruh properti dan method dari interface Array<number>.
+});
+
 test("test 1...", () => {
   // jadi sebenarnya itu hampir mirip seperti menggunakan type
   interface User {
@@ -14,7 +21,8 @@ test("test 1...", () => {
   };
 
   // untuk stirngDictionary yang agak bebas
-  interface StringDictionary { // akan menghasilkan objek buakan array
+  interface StringDictionary {
+    // akan menghasilkan objek buakan array
 
     // jadi ini tuh dictionary
     // yang keynya itu adalh string
@@ -33,7 +41,8 @@ test("test 1...", () => {
   };
 
   // untuk array
-  interface MyArray { // akan menghasilkan objek bukan array
+  interface MyArray {
+    // akan menghasilkan objek bukan array
     // jadi index itu maksudnya adalah
     // indexnya itu harus number, dan ini sudah defaulyaa
     // dan valuenya bisa boolean | string | number
@@ -58,7 +67,7 @@ test("test 1...", () => {
 
     // ini bisa
     tambah: (a, b) => a + b,
-    kurang: function (a, b?){
+    kurang: function (a, b?) {
       if (b) {
         return a - b;
       } else {
@@ -177,7 +186,8 @@ console.log(calc.tambah(5, 3)); // 8
 // ===================================================================
 interface Kendaraan {
   merk: string;
-  nyalakan(): void;
+  nyalakan():void
+  // nyalakan2:()=>void;
 }
 
 class Mobil implements Kendaraan {
@@ -189,10 +199,16 @@ class Mobil implements Kendaraan {
   nyalakan() {
     console.log(`${this.merk} menyala`);
   }
+  // nyalakan2=function (){ // ga bsia
+  //   console.log(`${this.merk} menyala`);
+  // }
 }
 
 const m1 = new Mobil("Toyota");
+console.log('====')
 m1.nyalakan(); // Toyota menyala
+// m1.nyalakan2(); // ga bsa
+console.log('====')
 
 // ===================================================================
 // * INTERFACE DENGAN INHERITANCE / EXTENDS

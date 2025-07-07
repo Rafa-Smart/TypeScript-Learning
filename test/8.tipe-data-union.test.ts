@@ -46,13 +46,6 @@ arr2.forEach((el) => {
 
 console.clear()
 
-// ===================================================================
-// * PENJELASAN LENGKAP TENTANG TIPE DATA UNION DI TYPESCRIPT
-// ===================================================================
-
-// ===================================================================
-// * APA ITU TIPE DATA UNION?
-// ===================================================================
 // Tipe data "union" memungkinkan sebuah variabel memiliki lebih dari
 // satu jenis tipe data (multi-type).
 // Sintaksnya menggunakan operator `|` (pipe).

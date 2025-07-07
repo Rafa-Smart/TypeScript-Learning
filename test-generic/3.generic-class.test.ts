@@ -45,28 +45,28 @@ it("testing", () => {
 
   //   disini kita coba kalo ga dimasukan ke constructor apakah bisa
 
-  class GenericData3<T> {
-    public value: T;
-    public id: number;
-    constructor(id: number) {
-      this.id = id;
-    }
-  }
+  // class GenericData3<T> {
+  //   public value: T;
+  //   public id: number;
+  //   constructor(id: number) {
+  //     this.id = id;
+  //   }
+  // }
 
     // const datates3 = new GenericData3()
   // nah ini akan error
 
   //   kecuali jika kita masukan si T nya ke constructor
-  class GenericData4<T> {
-    public value: T;
-    public id: T;
-    constructor(id: T) {
-      this.id = id;
-    }
-  }
-  //ini ga akan error
-  const datates4 = new GenericData4(5);
-  console.log(datates4); // GenericData4 { id: 5 } 
+  // class GenericData4<T> {
+  //   public value: T;
+  //   public id: T;
+  //   constructor(id: T) {
+  //     this.id = id;
+  //   }
+  // }
+  // //ini ga akan error
+  // const datates4 = new GenericData4(5);
+  // console.log(datates4); // GenericData4 { id: 5 } 
 
   // APA ITU GENERIC CLASS?
   // Generic Class adalah class di TypeScript yang menggunakan parameter generic

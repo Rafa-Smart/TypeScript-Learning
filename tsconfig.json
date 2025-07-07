@@ -1,7 +1,7 @@
 {
   // jadi maksudnya kita akn compile seluruh file ts yang ada di src dan test
   // kecuali yang ada di src dan test yang berakhiran .test.ts
-  "include": ["src/**/*", "test/**/*","test-oop/**/*","experimen/**/*"],
+  "include": ["src/**/*", "test/**/*","test-oop/**/*","experimen/**/*","test-generic/**/*"],
   // "exclude": ["src/**/*.test.ts", "test/**/*.test.ts"],
   "compilerOptions": {
 

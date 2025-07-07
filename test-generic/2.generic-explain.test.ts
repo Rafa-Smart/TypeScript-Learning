@@ -21,9 +21,9 @@ it("testing", () => {
   // tetapi sebenarnya huruf apa pun bisa digunakan.
 
   // Contoh fungsi tanpa generic:
-  function echo(value) {
-    return value;
-  }
+  // function echo(value) {
+  //   return value;
+  // }
   // Ini fleksibel tapi tidak aman, karena tidak tahu tipe hasilnya:
   // const result = echo("hello"); // TypeScript tidak tahu ini string atau bukan
 

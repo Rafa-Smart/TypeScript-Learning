@@ -1,4 +1,12 @@
 {
+
+
+    // jadi kesimpulannya dari pengetesan ini adalah
+    // jadi meskipun extends, bukan berati harus extends yang benar benar turunan
+    // tapi itu benar tapi juga bisa
+    // jadi extends itu kayak bare minimum, sebuah objek bisa masuk atu sesuatu bsia masuk
+    // dan disini bare minimumnya itu adlah sebuah objek yang mempunyai property id
+
   // sebelumnya kan kalo mau pake constraint di generic
   // jadi tipe data yang masuk itu hanya tipedata itu dan juga turunannya
   // nah kita coba untuk yang interface yang aneh dikit
@@ -15,7 +23,7 @@
   // ini yang bukan turunan dari PunyaId tapi
   // dia punya proprty id
 
-  interface Sendiri {
+  interface Sendiri { // dia berdiri sendiri dan tidak extends apapun
     id: number;
     kelas: string;
   }

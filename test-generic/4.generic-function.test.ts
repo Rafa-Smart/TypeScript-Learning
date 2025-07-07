@@ -1,5 +1,6 @@
 console.clear();
 
+
 // jadi itereble itu adlah interface dan sebuah kontrak
 // NANTI LIAT LAGI ISI DARI ARRAY<T> keren banget
 

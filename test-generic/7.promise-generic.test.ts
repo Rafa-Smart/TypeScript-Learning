@@ -1,10 +1,5 @@
 it("test", () => {
-  // =====================================================================
-  // Penjelasan sangat lengkap tentang PROMISE GENERIC FUNCTION di TypeScript
-  // =====================================================================
 
-  // Apa itu Promise Generic Function?
-  // ---------------------------------
   // Promise Generic Function adalah fungsi yang:
   // - Mengembalikan Promise
   // - Memiliki generic type parameter (seperti T, U, dsb)

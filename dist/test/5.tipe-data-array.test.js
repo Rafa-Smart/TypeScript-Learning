@@ -12,11 +12,22 @@ it('read only array', () => {
     // yag hanya bsia di baca saja
     // jadi tidak bisa di ubah ubah lagi
     // dengan cara tipe data readonly
-    // meskipun ketika nanti kodenya diubah ke js, ini akan tetap bisa diubah
-    // jadi yang menjaganya itu adaalh si tsnya
-    // jadi kalo liat di kodejsnya tetap sama aja
-    // tapi di js bisa dirubah, tapi ketika di file ts akan dijaga oleh si tsnya
     let dataArray1 = [1, 2, 3];
+    dataArray1.push();
+    // tuh jadi ga bisa, karena method push ini ga ada di interface ReadonlyArray, tapi kita bisa gini
+    // ohh jadi defaultnya kalo kita ga pake ReadonlyArray ini
+    // maka nanti kita akan menggunakan interface Array<T>
+    // jadi karena kita pake interface si ReadonlyArray
+    // jadi kita hanay bisa membaca arrray ini saja
+    // dan tidak bisa diubah ubah
+    // karena keterbatasan akses untuk merubah 
+    // karena kita menggunakan interface ReadonlyArray ini
+    // jadi sama kyak extends, jadi kita new dari si Array<T>
+    // tapi kita mneggunakn interface yang lain yang tidak selengkap si
+    // Array, dan apakah dengn kita mengguakan interface yang terbatas
+    // tapi kita new dari Array<T> yang sudah lengkap methodnya
+    // tapi ketik buat instance objek nya kita mengikuti interface ReadonlyArray
+    // yang lebih sedikit method arraynya
     console.log(dataArray1); // bisa
     // harusnya gini 
     // jadi penjelasa untuk Readonly ada di file 6.tipe-data-tuple

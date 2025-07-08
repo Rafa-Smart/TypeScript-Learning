@@ -50,6 +50,7 @@ test("test 1...", () => {
   }
 
   const array1: MyArray = ["rafa", 12, true];
+  // array1.push() // tapi ini ga ada sudh dijelaskan di experimen 9
 
   // interface untuk function
   interface MyFunction1 {

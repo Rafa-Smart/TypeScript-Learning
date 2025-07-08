@@ -160,6 +160,8 @@ it("testing", () => {
   // GENERIC CLASS DENGAN MULTIPLE TYPE PARAMETER
 
   class PairStore<K, V> {
+    // ini artinya adlah
+    // [[K,V],[K,V]]
     private pairs: [K, V][] = [];
 
     add(key: K, value: V): void {

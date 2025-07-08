@@ -1,5 +1,10 @@
 // interface (juga bisa disebut bentuk lain dari abstraction)
 
+// jadi abstrak itu class yang ga bisa diturunkan, dan sebagian property dan methodnya itu adalah
+// kontrak dan sebagian lagi adalah implementasi
+// 
+
+
 describe("testing", () => {
   // jadi abstrak ini tuh meskipun adalah sebuah class
   // tapi dia ga bsia di baut instace objekny

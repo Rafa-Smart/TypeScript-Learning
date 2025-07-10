@@ -1,4 +1,10 @@
 
+// let dataReadArray: ReadonlyArray<number> = [1, 2, 3]
+// Berarti kamu memberi tahu TypeScript:
+
+// “Hei compiler, tolong perlakukan dataReadArray seolah-olah hanya punya fitur-fitur yang didefinisikan dalam ReadonlyArray<number>.”
+
+// Meskipun dataReadArray itu sebenarnya instance dari Array<number>, TypeScript akan membatasi apa yang bisa kamu akses dari variable tersebut sesuai kontrak yang kamu deklarasikan.
 {
     // jadi kita akn membuat experimen,
     // jadi kenapa ketika kita menggunakan interface ReadonlyArray

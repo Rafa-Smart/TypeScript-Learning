@@ -148,6 +148,8 @@ it("testing", () => {
 
   // GENERIC DENGAN KEYOF DAN IN OPERATOR
   function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+    // maksudnya adlaah berati, parametr keduanya ini wajib sebuah key
+    // yang ada di objek T
     return obj[key];
   }
 

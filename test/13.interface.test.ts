@@ -94,10 +94,21 @@ it("test lagii...", () => {
 
   // ini ga bisa karena ada 2 interface, tapi hanya dipake 1
 
-  // interface HItung2 {
-  //     (a:number, b:number):number,
-  //     (a:string, b:number):number
-  // }
+  interface HItung8 {
+      (a:number, b:number):number,
+      (a:string, b:number):number
+  }
+  const hasil:HItung8 = (a:any, b:any):any => {
+    if (typeof a === 'number' && typeof b === 'number') {
+      return a + b;
+    }else if(typeof a === "string" && typeof b === "number"){
+      `huruf a = ${a} b: ${b}`
+    }else {
+      `tidak ada`
+    }
+  }
+
+
 
   // const perkalian: HItung2 = (a,b) => a * b
 

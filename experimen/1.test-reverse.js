@@ -46,3 +46,47 @@ function test(array) {
 }
 console.log("============");
 console.log(test(data4));
+
+
+let data5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let f = data5.shift()
+let t = []
+console.log(f)
+t.push(f)
+console.log(t)
+console.log('==========')
+// oke ini tengah malem baru kepikiran
+function reverseMalem(arr) {
+  let data = [];
+  // for(let i = 0; i < arr.length; i++){
+  //   let d = arr.shift()
+  //   console.log(d)
+  //   data.push(d);
+  // }
+
+  for(let i of arr){
+      data.push(i)
+  }
+
+  return data;
+}
+console.log('==============')
+console.log(reverseMalem([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
+
+console.log('--------------')
+console.log('--------------')
+console.log('--------------')
+// oke ini berhasil
+
+function Beres(arr){
+  let data = [];
+  for(let i of arr){
+    data.unshift(i)
+  }
+  return data
+}
+let data6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(`sebelum: ${data6}`)
+console.log(`sesudah: ${Beres(data6)}`)

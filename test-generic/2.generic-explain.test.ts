@@ -26,7 +26,7 @@ it("testing", () => {
   // }
   // Ini fleksibel tapi tidak aman, karena tidak tahu tipe hasilnya:
   // const result = echo("hello"); // TypeScript tidak tahu ini string atau bukan
-
+ 
   // CONTOH DENGAN GENERIC:
   function genericEcho<T>(value: T): T {
     return value;

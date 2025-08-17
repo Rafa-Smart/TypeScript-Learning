@@ -27,8 +27,10 @@
 it('testing', () =>{ 
     class Data {
         public value:any;
-        constructor(value:any){
+        protected nama?:String;
+        constructor(value:any, nama?:String){
             this.value = value;
+            this.nama = nama;
         }
     }
     // nah ini tidak disarankan karena menggunakan tipedata any

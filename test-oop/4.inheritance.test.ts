@@ -53,4 +53,37 @@ describe('Inheritance', () => {
         // juga dari si employee
 
     });
+
+    it('testing', () => {
+        class Test{
+            constructor(public no:number){
+
+            }
+        }
+
+        class Test2 extends Test{
+            // constructor(){
+            //     super(no);
+            // }
+        }
+        const data = new Test2(56);
+
+        // jadi kalo ga pake constructor di child classnya, maka tetap constructornya itu ngambil dari
+        // si parent classnya
+
+        // tapi kalo ita punya constructor juga di cassnya, maka yang dipake itu yg dari childnya aja
+
+        class Jamal {
+            constructor(public no:number){}
+        }
+
+        class Siti extends Jamal {
+            public nama:String;
+            constructor(nama:String, no:number){
+                super(no)
+                this.nama = nama;
+            }
+        }
+
+    })
 });

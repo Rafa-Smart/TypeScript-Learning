@@ -45,7 +45,7 @@ describe("testing", () => {
   // Misal kita punya interface Pembayaran
 
   class Pembayaran {
-    bayar() {
+    bayar():void {
       console.log("Melakukan pembayaran umum");
     }
   }

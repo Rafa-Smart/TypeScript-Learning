@@ -46,3 +46,4 @@
     // tapi yang pneting mempunyai property atau method yang di syaratkan pada parameter fungsinya
 
 }
+// test

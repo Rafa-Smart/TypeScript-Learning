@@ -90,3 +90,48 @@ function Beres(arr){
 let data6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(`sebelum: ${data6}`)
 console.log(`sesudah: ${Beres(data6)}`)
+
+// tet lagi
+console.log('testj akanaa')
+
+let data7 = [4,5,6,3,8,7,5,4,3,2]
+
+function est4(array){
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array.length -1; j++){
+        if(array[j] > array[j+1]){
+          array[j+1] = array[j]
+        }
+    }
+  }
+  return array;
+}
+
+console.log(est4(data7))
+
+
+console.log('tettete')
+
+function testtt(data){
+  let hasil = ''
+  for(let i = 0; i < data.length; i ++){
+    let sementara = data[i];
+    let jumlah = 0
+    for (let j = 0; j< sementara.length;j++){
+        if(sementara[j] == sementara[j].toUpperCase()){
+          jumlah ++
+        }
+      }
+      hasil += `array ke ${sementara} jumlahnya = ${jumlah}`
+  }
+  return hasil;
+}
+
+console.log(testtt(["Arra", "AYHsss"]))
+
+
+console.log('sssssssssss')
+
+let anja22y= [1,2,3,4,5,6]
+let hasilanja33y = anja22y.unshift(3)
+console.log(anja22y)

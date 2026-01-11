@@ -1,18 +1,18 @@
 class TestParent {
-      namaDefaultParent= "rafa"; // nilai default
-    }
+  namaDefaultParent = "rafa"; // nilai default
+}
 
-    class TestChild extends TestParent {
-        namaDefaultChild
-      constructor(umur) {
-        super()
-        this.umur = umur;
-        this.namaDefaultChild = this.namaDefaultParent
-      }
-    }
+class TestChild extends TestParent {
+  namaDefaultChild;
+  constructor(umur) {
+    super();
+    this.umur = umur;
+    this.namaDefaultChild = this.namaDefaultParent;
+  }
+}
 
-    const tes= new TestChild(4);
-    console.log(tes);
+const tes = new TestChild(4);
+console.log(tes);
 
 // hasilnya
 // TestChild {
@@ -21,11 +21,7 @@ class TestParent {
 //   umur: 4
 // }
 
-
 // jadi bisa tapi ga boleh pake constructor di parent nya
 // jadi nanti di class childnya itu bisa ga pake constuctor
 
-
-function mymap(array, callback){
-  
-}
+function mymap(array, callback) {}

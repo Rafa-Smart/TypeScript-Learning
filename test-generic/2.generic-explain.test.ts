@@ -60,6 +60,7 @@ it("testing", () => {
   // Karena dibatasi harus punya 'length', maka hanya string, array, atau objek tertentu yang valid
 
   logLength("hello");
+  // logLength();
   logLength([1, 2, 3]);
   // logLength(123); // Error: number tidak punya length
 

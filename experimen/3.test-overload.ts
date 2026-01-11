@@ -3,7 +3,7 @@
 // antara interface dnegan type
 
 // jadi kesimpulannya kit ga bisa menggunakna overlaod dengan 
-// menggunakan interface atau type yang mempunyai 2 fungsi atau lebih yang tidak punya nama
+// menggunakan interface atau type yang mempunyai 2 fungsi atau lebih yang tidak punya nama 
 // karena itu ketika di panggil makakita memaksa agar menjadi 1 fungsi, darikedua fungis tersebut
 // makanya tipenya itu adalah any
 

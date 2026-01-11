@@ -132,7 +132,8 @@ const x: BisaMakan = manusia;
 // ✅ Ini sah karena manusia secara struktural cocok dengan BisaMakan.
 // Tapi manusia tetap objek dengan makan dan tidur, cuma TypeScript memperlakukannya sebagai objek BisaMakan.
 
-
+x.makan() // ada
+// x.tidur() tidak ada karena sudah dibatasi oelh interface bisamakan
 
 // jadi interface yang isinya hanya sebih sedikit dari interface yang lebih banyak dan yang interface
 // dikit ini punya beberapa property atau method yang sama dengan interface yang banyak

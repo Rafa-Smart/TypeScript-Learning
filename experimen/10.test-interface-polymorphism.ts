@@ -16,7 +16,9 @@
         nama:string,
         kelas:string
     }
-    i
+    interface Walk {
+
+    }
 
 
 

@@ -16,6 +16,7 @@
         nama:string,
         kelas:string
     }
+    i
 
 
 

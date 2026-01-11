@@ -19,6 +19,7 @@
     interface Walk {
         id:number,
         name:string,
+        kelas:string
     }
 
 

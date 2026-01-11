@@ -17,7 +17,7 @@
         kelas:string
     }
     interface Walk {
-
+        id:number,
     }
 
 

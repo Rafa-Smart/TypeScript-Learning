@@ -19,7 +19,8 @@
     interface Walk {
         id:number,
         name:string,
-        kelas:string
+        kelas:string,
+        post_id:number
     }
 
 
